@@ -4,10 +4,10 @@
 #include <iostream>
 int main()
 {
-      std::ifstream file("physics-2023s-biggest-breakthroughs-youtubemp3free.org.wav", std::ios::binary); // Open the file in binary mode
+      std::ifstream file("../physics-2023s-biggest-breakthroughs-youtubemp3free.org.wav", std::ios::binary); // Open the file in binary mode
 
 
-    const char *fifoPath = "/home/user/virtual_mic/virtual_mic"; // Replace with the path to your FIFO
+    const char *fifoPath = "/tmp/virtual_mic"; // Replace with the path to your FIFO
 
     int fd = open(fifoPath, O_WRONLY); // Open the FIFO for writing
 	if (fd == -1) 
@@ -23,7 +23,7 @@ int main()
 	while(true)
 {
         // Read a specified number of bytes into a buffer
-        const int BUFFER_SIZE = 320;
+        const int BUFFER_SIZE = 882/*320*/;
         char buffer[BUFFER_SIZE];
         file.read(buffer, BUFFER_SIZE);
 
@@ -37,6 +37,10 @@ if (bytesWritten == -1) {
 	std::cout << "error writing into fifo " << std::endl;
 	exit(2);
 }
+else
+{
+    usleep(10000);
+    }
 
 
 }
