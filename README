@@ -2,4 +2,4 @@
 mkfifo filename
 
 #Create Virtual Microphone
-pacmd load-module module-pipe-source source_name=virtual_mic file=/tmp/virtual_mic format=s16le rate=44100 channels=1
+pacmd load-module module-pipe-source source_name=virtual_mic file=/tmp/virtual_mic format=s16le rate=16000 channels=1
