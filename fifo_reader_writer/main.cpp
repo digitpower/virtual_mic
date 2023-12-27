@@ -20,7 +20,7 @@ int main(int argc, char** argv)
 	    while(true)
         {
             // Read a specified number of bytes into a buffer
-            const int BUFFER_SIZE = 320;
+            const int BUFFER_SIZE = 320*2;
             char buffer[BUFFER_SIZE];
             file.read(buffer, BUFFER_SIZE);
 
@@ -35,7 +35,7 @@ int main(int argc, char** argv)
             }
             else
             {
-                usleep(10000);
+                usleep(10000*2);
             }
         }
         file.close(); // Close the file when done
