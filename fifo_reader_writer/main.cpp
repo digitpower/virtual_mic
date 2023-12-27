@@ -27,7 +27,6 @@ int main(int argc, char** argv)
             // Get the actual number of bytes read
             std::streamsize bytesRead = file.gcount();
 
-	        std::cout << "Try to write bytes" << std::endl;
             // Process the content of the buffer here
             ssize_t bytesWritten = write(fd, buffer, BUFFER_SIZE);
             if (bytesWritten == -1) {
