@@ -20,7 +20,7 @@ int main(int argc, char** argv)
 	    while(true)
         {
             // Read a specified number of bytes into a buffer
-            const int BUFFER_SIZE = 882/*320*/;
+            const int BUFFER_SIZE = 320;
             char buffer[BUFFER_SIZE];
             file.read(buffer, BUFFER_SIZE);
 
