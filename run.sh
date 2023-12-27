@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [[ ! -e /tmp/virtual_mic ]]; then
-  mkfifo tmp/virtual_mic
+  mkfifo /tmp/virtual_mic
 fi
 
 
