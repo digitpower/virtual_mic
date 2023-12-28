@@ -16,11 +16,12 @@ int main(int argc, char** argv)
 		exit(1);
 	}
 
+    int bytesPer10Ms = atoi(argv[2]);
     if (file.is_open()) {
 	    while(true)
         {
             // Read a specified number of bytes into a buffer
-            const int BUFFER_SIZE = 320*2;
+            const int BUFFER_SIZE = bytesPer10Ms*2;
             char buffer[BUFFER_SIZE];
             file.read(buffer, BUFFER_SIZE);
 
