@@ -1,0 +1,1 @@
+xdg-open "zoommtg://zoom.us/join?action=join&confno=8784588697&pwd=927063"
